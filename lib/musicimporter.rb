@@ -11,7 +11,8 @@ class MusicImporter
   end
 
   def files
-    Dir.entries("#{@path}").select{|entry|entry.inlcude?(".mp3")}
+    Dir.entries("#{@path}").select{|entry|entry.inlcude?
+      (".mp3")}
   end
 
   def import
