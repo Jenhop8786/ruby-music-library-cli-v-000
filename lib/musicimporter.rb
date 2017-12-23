@@ -1,20 +1,20 @@
 class MusicImporter
-  attr_accessor :path 
+  attr_accessor :path
 
 
   def initialize(path)
-    @path = path 
-  end 
+    @path = path
+  end
 
-  def path 
-    @path 
-  end 
+  def path
+    @path
+  end
 
-  def files 
+  def files
     Dir.entries("#{@path}").select{|entry|entry.inlcude?(".mp3")}
-  end 
+  end
 
-  def import 
+  def import
     files.each {|file| Song.create_from_filename(filename)}
-  end 
-end 
+  end
+end
