@@ -30,7 +30,7 @@ end
 
 def genres
   genres = []
-  self.songs.each {|songs|genres << song.genre}
+  self.songs.each {|song|genres << song.genre}
   genres.uniq
 end
 
